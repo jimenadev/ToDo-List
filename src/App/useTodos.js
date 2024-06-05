@@ -1,10 +1,7 @@
 import React from 'react'
 import { useLocalStorage } from './useLocalStorage';
 
-
-const TodoContext =  React.createContext()
-
-function TodoProvider({children}){
+function useTodos(){
 
     const [searchValue, setSearchValue] = React.useState('');
     const [filterTodos, setFilterTodos] = React.useState('All');
@@ -13,8 +10,17 @@ function TodoProvider({children}){
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
     const totalTodos = todos.length;
+    let searchedTodos = todos;
 
-    let searchedTodos = todos.filter(
+    if(filterTodos === 'Active'){
+      searchedTodos = todos.filter((todo) => !todo.completed)
+    }else if(filterTodos === 'Completed'){
+      searchedTodos = todos.filter((todo) => todo.completed)
+    }else{
+      searchedTodos = todos
+    }
+
+    searchedTodos = searchedTodos.filter(
       (todo) => {
         const todoText = todo.text.toLowerCase()
         const search = searchValue.toLowerCase()
@@ -49,17 +55,10 @@ function TodoProvider({children}){
       saveTodos(newTodos)
     }
 
-    if(filterTodos === 'Active'){
-      searchedTodos = todos.filter((todo) => !todo.completed)
-    }else if(filterTodos === 'Completed'){
-      searchedTodos = todos.filter((todo) => todo.completed)
-    }else{
-      searchedTodos = todos
-    }
+  
 
       
-      return (
-          <TodoContext.Provider value={{
+      return {
               loading,
               error,
               completedTodos,
@@ -72,10 +71,7 @@ function TodoProvider({children}){
               deleteTodo,
               setSearchValue,
               addTodo,
-          }}>
-              {children}
-          </TodoContext.Provider>
-      )
+          }
 }
 
-export {TodoContext, TodoProvider}
+export {useTodos}

@@ -2,16 +2,10 @@ import "./TodoForm.css"
 import { MdAddTask } from "react-icons/md"
 import imagen from './../assets/img/Learning-amico.svg'
 import React from "react"
-import { TodoContext } from '../TodoContext'
 
-function TodoForm(){
-
-  const {
-    addTodo
-  } = React.useContext(TodoContext)
+function TodoForm({addTodo}){
 
   const [newTodoValue, setNewTodoValue] = React.useState()
-
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -24,9 +18,6 @@ function TodoForm(){
       setNewTodoValue(event.target.value)
   }
 
-
-
-  
     return(
       <div className="item containerCreate">
         <div className="addTask">
