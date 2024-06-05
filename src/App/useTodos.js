@@ -10,7 +10,7 @@ function useTodos(){
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
     const totalTodos = todos.length;
-    let searchedTodos = todos;
+    let searchedTodos =[];
 
     if(filterTodos === 'Active'){
       searchedTodos = todos.filter((todo) => !todo.completed)
@@ -30,11 +30,23 @@ function useTodos(){
 
     const addTodo = (text) => {
       const newTodos = [...todos]
-      newTodos.push({
-        text,
-        completed:false,
-      })
-      saveTodos(newTodos)
+
+      let existeTodo = newTodos.filter(
+        (todo) => {
+          const todoText = todo.text.toLowerCase()
+          const search = text.toLowerCase()
+          return todoText.includes(search)
+        })
+
+        if(existeTodo.length == 0){
+          newTodos.push({
+            text,
+            completed:false,
+          })
+          saveTodos(newTodos)
+        }else{
+          alert('A task with that name already exists')
+        }
     }
 
     const completeTodo = (text) => {
