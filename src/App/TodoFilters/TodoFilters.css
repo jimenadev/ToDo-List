@@ -1,0 +1,24 @@
+
+.filtros{
+    list-style: none;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    font-size: 24px;
+    color:  rgb(153, 84, 158);
+}
+
+.filtros li{
+    margin: 20px;
+    cursor: pointer;
+    
+}
+
+.filtros li{
+   font-weight: bold;
+}
+
+.filtros li:hover, .active{
+    color:green;
+ }
+
