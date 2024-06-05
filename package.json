@@ -32,7 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jimenadev.github.io/TODOS-MACHINE",
+  "homepage": "https://jimenadev.github.io/ToDo-List",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }

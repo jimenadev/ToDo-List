@@ -6,8 +6,6 @@ function TodoSearch({
   setSearchValue,
 }){
 
-
-
     return(
       <div className="containerSearch">
         <input className="TodoSearch" placeholder="Search" value={searchValue}
