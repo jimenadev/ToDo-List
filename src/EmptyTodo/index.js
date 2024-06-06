@@ -3,7 +3,7 @@ import "./EmptyTodo.css"
 
 function EmptyTodo(){
     return(
-      <p>create your first task...</p>
+      <p className='message'>create your first task...</p>
     )
   }
 

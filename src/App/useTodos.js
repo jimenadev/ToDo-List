@@ -38,7 +38,7 @@ function useTodos(){
           return todoText.includes(search)
         })
 
-        if(existeTodo.length == 0){
+        if(existeTodo.length === 0){
           newTodos.push({
             text,
             completed:false,

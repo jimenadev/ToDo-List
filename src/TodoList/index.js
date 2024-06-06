@@ -2,11 +2,14 @@ import "./TodoList.css"
 
 function TodoList(props){
     return(
-      <div className="containerTodolist">
+      <section className="containerTodolist">
+        {props.error && props.onError()}
+        {props.loading && props.onLoading()}
+        {(!props.loading && !props.searchedTodos?.length) && props.onEmptyTodos()}
         <ul className="TodoList">
-          {props.children}
+            {props.searchedTodos.map(props.render)}
         </ul>
-      </div>
+      </section>
     )
   }
 
