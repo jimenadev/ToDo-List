@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ToDo-List/static/css/main.0944017f.css",
-    "main.js": "/ToDo-List/static/js/main.a35c050a.js",
+    "main.css": "/ToDo-List/static/css/main.6acfdfba.css",
+    "main.js": "/ToDo-List/static/js/main.b383b171.js",
     "static/media/examen.png": "/ToDo-List/static/media/examen.12c08d47872619bf9a10.png",
     "static/media/Learning-amico.svg": "/ToDo-List/static/media/Learning-amico.8c06e86e57d68cd84a526d4443a26812.svg",
     "index.html": "/ToDo-List/index.html",
     "static/media/delete.svg": "/ToDo-List/static/media/delete.d9c7e0eeb3f573572e1521b7b69ed33e.svg",
     "static/media/check.svg": "/ToDo-List/static/media/check.af03c9a6a0411e40578874e6f00e807b.svg",
-    "main.0944017f.css.map": "/ToDo-List/static/css/main.0944017f.css.map",
-    "main.a35c050a.js.map": "/ToDo-List/static/js/main.a35c050a.js.map"
+    "main.6acfdfba.css.map": "/ToDo-List/static/css/main.6acfdfba.css.map",
+    "main.b383b171.js.map": "/ToDo-List/static/js/main.b383b171.js.map"
   },
   "entrypoints": [
-    "static/css/main.0944017f.css",
-    "static/js/main.a35c050a.js"
+    "static/css/main.6acfdfba.css",
+    "static/js/main.b383b171.js"
   ]
 }
