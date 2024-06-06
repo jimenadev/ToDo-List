@@ -4,6 +4,8 @@ import React from 'react'
 const defaultTodos = [
     {text: 'Cocinar', completed: true},
     {text: 'Tomar el Curso de React.js', completed: false},
+    {text: 'Salir en Bici', completed: false},
+
   ]
   
   localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos))

@@ -34,7 +34,7 @@
 	height: 6em;
 	transform: translate3d(0,0,0);
 	transform-style: preserve-3d;
-    margin: 0 auto;
+    margin: 3vh auto;
 }
 .book__pg-shadow,
 .book__pg {

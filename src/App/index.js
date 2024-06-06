@@ -13,6 +13,7 @@ import { TodoFilters } from '../TodoFilters';
 import { TodoContainer } from '../TodoContainer';
 import { TodoTasks } from '../TodoTasks';
 import './App.css';
+import { EmptySearchTodo } from '../EmptySearchTodo';
 
 
 
@@ -22,10 +23,10 @@ function App(){
                 error,
                 completedTodos,
                 totalTodos,
+                searchedTodos,
                 searchValue,
                 filterTodos,
                 setFilterTodos,
-                searchedTodos,
                 completeTodo,
                 deleteTodo,
                 setSearchValue,
@@ -53,9 +54,12 @@ function App(){
                       error={error}
                       loading={loading} 
                       searchedTodos={searchedTodos}
+                      totalTodos={totalTodos}
+                      searchValue={searchValue}
                       onError={() => <TodosError />}
                       onLoading={() => <TodosLoading />}
                       onEmptyTodos={() => <EmptyTodo />}
+                      onEmptySearchTodos={(searchValue) => <EmptySearchTodo searchValue={searchValue} />}
                       render={ todo => (
                         <TodoItem
                           key={todo.text}
