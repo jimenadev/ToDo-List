@@ -12,9 +12,10 @@ import { useTodos } from './useTodos'
 import { TodoFilters } from '../TodoFilters';
 import { TodoContainer } from '../TodoContainer';
 import { TodoTasks } from '../TodoTasks';
-import './App.css';
 import { EmptySearchTodo } from '../EmptySearchTodo';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
+import './App.css';
 
 
 function App(){
@@ -30,7 +31,8 @@ function App(){
                 completeTodo,
                 deleteTodo,
                 setSearchValue,
-                addTodo
+                addTodo,
+                sincronizeTodos
   } = useTodos();
 
     return (
@@ -98,6 +100,9 @@ function App(){
                   </TodoList>
               </TodoTasks>
               
+              <ChangeAlertWithStorageListener 
+                  sincronize={sincronizeTodos}
+              />
             </TodoContainer>  
       </div>
       );

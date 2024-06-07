@@ -5,7 +5,7 @@ function useTodos(){
 
     const [searchValue, setSearchValue] = React.useState('');
     const [filterTodos, setFilterTodos] = React.useState('All');
-    const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', []);
+    const {item: todos, saveItem: saveTodos, sincronizeItem: sincronizeTodos, loading, error} = useLocalStorage('TODOS_V1', []);
 
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
@@ -83,6 +83,7 @@ function useTodos(){
               deleteTodo,
               setSearchValue,
               addTodo,
+              sincronizeTodos
           }
 }
 
