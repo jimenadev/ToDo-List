@@ -4,6 +4,7 @@ import "./TodoSearch.css"
 function TodoSearch({
   searchValue,
   setSearchValue,
+  loading
 }){
 
   const onSearchValueChange = (event) => {
@@ -13,8 +14,13 @@ function TodoSearch({
 
     return(
       <div className="containerSearch">
-        <input className="TodoSearch" placeholder="Search" value={searchValue}
-        onChange={onSearchValueChange} />
+        <input
+              className="TodoSearch" 
+              placeholder="Search" 
+              value={searchValue}
+              onChange={onSearchValueChange}
+              disabled={loading}
+              />
       </div>
     )
   }

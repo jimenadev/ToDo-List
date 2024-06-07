@@ -14,6 +14,10 @@ form{
     gap: 1vw;
 }
 
+.addItem:disabled, .TodoForm-button:disabled{
+    opacity: 25%;
+  }
+
 .addItem{
     background: #F9FBFC;
     border-radius: 20px;

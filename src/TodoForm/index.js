@@ -1,9 +1,10 @@
+import React from "react"
 import "./TodoForm.css"
 import { MdAddTask } from "react-icons/md"
 import imagen from './../assets/img/Learning-amico.svg'
-import React from "react"
 
-function TodoForm({addTodo}){
+
+function TodoForm({addTodo, loading}){
 
   const [newTodoValue, setNewTodoValue] = React.useState()
 
@@ -23,8 +24,8 @@ function TodoForm({addTodo}){
         <div className="addTask">
           <h1 className="titleCreateTask">Create new Task</h1>
           <form >
-            <div><textarea type="text" placeholder="New item" className="addItem"  value={newTodoValue} onChange={onChange} /></div>
-            <div><button onClick={ onSubmit } type="submit" title="Add new Task" className="TodoForm-button" ><MdAddTask className="addTodo" size={40}  /></button></div>
+            <div><textarea   disabled={loading} type="text" placeholder="New item" className="addItem"  value={newTodoValue} onChange={onChange} /></div>
+            <div><button   disabled={loading} onClick={ onSubmit } type="submit" title="Add new Task" className="TodoForm-button" ><MdAddTask className="addTodo" size={40}  /></button></div>
           </form>
         </div>
         <div className="imgTask">

@@ -36,18 +36,27 @@ function App(){
     return (
         <div className='app'>
             <TodoHeader> 
-                <TodoCounter completed={completedTodos} total={totalTodos} />
+                <TodoCounter 
+                    completed={completedTodos} 
+                    total={totalTodos} 
+                    loading={loading} 
+                />
             </TodoHeader>
             <TodoContainer >  
               
-              <TodoForm addTodo={addTodo}/>
+              <TodoForm 
+                  addTodo={addTodo}
+                  loading={loading} 
+                  />
 
               <TodoTasks>
                     <TodoFilters setFilterTodos={setFilterTodos} filterTodos={filterTodos}/>
                     
                     <TodoSearch
                       searchValue={searchValue}
-                      setSearchValue={setSearchValue} />
+                      setSearchValue={setSearchValue}
+                      loading={loading} 
+                    />
 
 
                     <TodoList
@@ -60,6 +69,7 @@ function App(){
                       onLoading={() => <TodosLoading />}
                       onEmptyTodos={() => <EmptyTodo />}
                       onEmptySearchTodos={(searchValue) => <EmptySearchTodo searchValue={searchValue} />}
+                      /**render props 
                       render={ todo => (
                         <TodoItem
                           key={todo.text}
@@ -69,7 +79,19 @@ function App(){
                           onDelete={() => deleteTodo(todo.text)}
                         />
                       )}
-                    />
+                      */
+                    >
+                    { todo => (
+                        <TodoItem
+                          key={todo.text}
+                          text={todo.text}
+                          completed={todo.completed}
+                          onComplete={() => completeTodo(todo.text)}
+                          onDelete={() => deleteTodo(todo.text)}
+                        />
+                      )}
+                  
+                  </TodoList>
               </TodoTasks>
               
             </TodoContainer>  
