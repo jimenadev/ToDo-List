@@ -8,15 +8,18 @@
     color:  rgb(153, 84, 158);
 }
 
+
 .filtros li{
     margin: 20px;
     cursor: pointer;
-    
+    font-weight: bold;
 }
 
-.filtros li{
-   font-weight: bold;
+.filtros--loading{
+    opacity: 25%;
 }
+
+
 
 .filtros li:hover, .active{
     color:green;

@@ -50,7 +50,11 @@ function App(){
                   />
 
               <TodoTasks>
-                    <TodoFilters setFilterTodos={setFilterTodos} filterTodos={filterTodos}/>
+                    <TodoFilters 
+                        setFilterTodos={setFilterTodos} 
+                        filterTodos={filterTodos}
+                        loading={loading} 
+                        />
                     
                     <TodoSearch
                       searchValue={searchValue}
