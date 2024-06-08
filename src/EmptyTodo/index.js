@@ -1,10 +1,8 @@
-import React from 'react'
-import "./EmptyTodo.css"
+import React from "react";
+import "./EmptyTodo.css";
 
-function EmptyTodo(){
-    return(
-      <p className='message'>create your first task...</p>
-    )
-  }
+function EmptyTodo() {
+  return <p className="message">create your first task...</p>;
+}
 
-  export { EmptyTodo };
+export { EmptyTodo };

@@ -1,40 +1,38 @@
-.todoCounter{
-    font-size: 40px;
-    text-align: center;
-    margin:0;
-    padding: 20px;
-    color: white;
-    font-weight: normal;
-    display: flex;
+.todoCounter {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  color: white;
+  font-weight: normal;
+  display: flex;
 
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1.5vw;
-
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5vw;
 }
-.todoCounter--loading{
-    opacity: 25%;
-}
-
-.todoCounter span{
-    font-weight: bold;
-    color: #FA709A;
+.todoCounter--loading {
+  opacity: 25%;
 }
 
-.wave{
-    min-height: 13vh; 
-    height: 13vh;
-    background-color: #7e5446;
-    margin-bottom: 5.5vh;
-
+.todoCounter span {
+  font-weight: bold;
+  color: #fa709a;
 }
 
-.todoCounter .todos{
-    font-family: 'Rubik Doodle Shadow';
-    color: white;
+.wave {
+  min-height: 13vh;
+  height: 13vh;
+  background-color: #7e5446;
+  margin-bottom: 5.5vh;
 }
 
-.todoCounter .img img{
-    z-index: 100;
+.todoCounter .todos {
+  font-family: "Rubik Doodle Shadow";
+  color: white;
+}
+
+.todoCounter .img img {
+  z-index: 100;
 }

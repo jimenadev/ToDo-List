@@ -1,5 +1,5 @@
 import './TodoCounter.css'
-import todoList from '../assets/img/examen.png'
+import todoList from '../assets/img/notas.png'
 
 
 function TodoCounter({ total, completed, loading}){

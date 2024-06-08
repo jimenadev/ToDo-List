@@ -4,6 +4,7 @@ import { useLocalStorage } from "./useLocalStorage";
 function useTodos() {
   const [searchValue, setSearchValue] = React.useState("");
   const [filterTodos, setFilterTodos] = React.useState("All");
+  const [openModal, setOpenModal] = React.useState(false);
   const {
     item: todos,
     saveItem: saveTodos,
@@ -37,7 +38,10 @@ function useTodos() {
     let existeTodo = newTodos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
       const search = text.toLowerCase();
-      return todoText.includes(search);
+      if (todoText === search) {
+        return true;
+      }
+      return false;
     });
 
     if (existeTodo.length === 0) {
@@ -47,7 +51,7 @@ function useTodos() {
       });
       saveTodos(newTodos);
     } else {
-      alert("A task with that name already exists");
+      setOpenModal(true);
     }
   };
 
@@ -79,6 +83,8 @@ function useTodos() {
     setSearchValue,
     addTodo,
     sincronizeTodos,
+    openModal,
+    setOpenModal,
   };
 }
 

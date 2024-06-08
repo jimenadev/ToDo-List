@@ -1,64 +1,57 @@
-import React from 'react'
+import React from "react";
 
 const defaultTodos = [
-    {text: 'Cocinar', completed: true},
-    {text: 'Tomar el Curso de React.js', completed: false},
-    {text: 'Salir en Bici', completed: false},
-  ]
-  
-  function useLocalStorage(itemName, initialValue){
+  { text: "Cocinar", completed: true },
+  { text: "Tomar el Curso de React.js", completed: false },
+  { text: "Salir en Bici", completed: false },
+];
 
-    const [sincronizedItem, setSincronizedItem] = React.useState(true)
-    const [item, setItem] = React.useState(initialValue)
-    const [loading, setLoading] = React.useState(true)
-    const [error, setError] = React.useState(false)
+function useLocalStorage(itemName, initialValue) {
+  const [sincronizedItem, setSincronizedItem] = React.useState(true);
+  const [item, setItem] = React.useState(initialValue);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(false);
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      try {
+        const localStorageItem = localStorage.getItem(itemName);
+        let parsedItem = [];
 
-    React.useEffect(() =>  {
-     setTimeout( () => {
-      try{
-        const localStorageItem = localStorage.getItem(itemName)
-        let parsedItem=[]
-        
-        if(!localStorageItem){
-          localStorage.setItem(itemName, JSON.stringify(initialValue))
-          parsedItem = initialValue
-        }else{
-           parsedItem = JSON.parse(localStorageItem)
+        if (!localStorageItem) {
+          localStorage.setItem(itemName, JSON.stringify(initialValue));
+          parsedItem = initialValue;
+        } else {
+          parsedItem = JSON.parse(localStorageItem);
         }
 
-        setItem(parsedItem)
-        setLoading(false)
-        setSincronizedItem(true)
-
-      }catch(error){
-        setLoading(false)
-        setError(true)
+        setItem(parsedItem);
+        setLoading(false);
+        setSincronizedItem(true);
+      } catch (error) {
+        setLoading(false);
+        setError(true);
       }
-     }, 3000 )
-     
-    }, [sincronizedItem]);
-  
-  
-    const saveItem = (newItem) => {
-      localStorage.setItem(itemName, JSON.stringify(newItem))
-      setItem(newItem)
-    } 
+    }, 3000);
+  }, [sincronizedItem]);
 
-    const sincronizeItem = () =>{
-      setLoading(true)
-      setSincronizedItem(false)
-    }
-  
-    return {
-      item,
-      saveItem,
-      loading,
-      error,  
-      sincronizeItem
-    }
-  }
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
 
-  export {useLocalStorage}
-  
-  
+  const sincronizeItem = () => {
+    setLoading(true);
+    setSincronizedItem(false);
+  };
+
+  return {
+    item,
+    saveItem,
+    loading,
+    error,
+    sincronizeItem,
+  };
+}
+
+export { useLocalStorage };
