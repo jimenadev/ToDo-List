@@ -78,8 +78,9 @@ form {
   color: #202329;
 }
 
-.TodoForm-button:hover {
-  background-color: green;
+.TodoForm-button:hover, .TodoForm-button:hover .addTodo {
+  background-color: #7e5446;
+  color: #fee140;
 }
 
 .titleCreateTask {
