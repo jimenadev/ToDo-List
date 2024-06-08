@@ -13,7 +13,7 @@ import { TodoFilters } from '../TodoFilters';
 import { TodoContainer } from '../TodoContainer';
 import { TodoTasks } from '../TodoTasks';
 import { EmptySearchTodo } from '../EmptySearchTodo';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 import './App.css';
 
@@ -75,17 +75,6 @@ function App(){
                       onLoading={() => <TodosLoading />}
                       onEmptyTodos={() => <EmptyTodo />}
                       onEmptySearchTodos={(searchValue) => <EmptySearchTodo searchValue={searchValue} />}
-                      /**render props 
-                      render={ todo => (
-                        <TodoItem
-                          key={todo.text}
-                          text={todo.text}
-                          completed={todo.completed}
-                          onComplete={() => completeTodo(todo.text)}
-                          onDelete={() => deleteTodo(todo.text)}
-                        />
-                      )}
-                      */
                     >
                     { todo => (
                         <TodoItem
@@ -100,7 +89,7 @@ function App(){
                   </TodoList>
               </TodoTasks>
               
-              <ChangeAlertWithStorageListener 
+              <ChangeAlert 
                   sincronize={sincronizeTodos}
               />
             </TodoContainer>  
