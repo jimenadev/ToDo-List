@@ -6,9 +6,6 @@ const defaultTodos = [
     {text: 'Salir en Bici', completed: false},
   ]
   
-  localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos))
-  
-  
   function useLocalStorage(itemName, initialValue){
 
     const [sincronizedItem, setSincronizedItem] = React.useState(true)
