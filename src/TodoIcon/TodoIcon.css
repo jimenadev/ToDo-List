@@ -28,7 +28,7 @@
   height: 24px;
 }
 .Icon-container-check:hover .Icon-svg {
-  fill:#fee140;
+  fill: green;
 }
 .Icon-container-delete:hover .Icon-svg {
   fill: red;
