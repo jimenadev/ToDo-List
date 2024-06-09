@@ -4,23 +4,23 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  padding: 3vh 3vw;
-  gap: 20px;
+  padding: 2vh 0;
+  gap: 5vh;;
 }
 
 .item {
-  padding: 5vh 2vw;
-  flex: 1 1 40%; /* Ajuste para tener espacio entre los elementos */
+  padding-top: 3vh;
+  flex-basis: 40%;
 }
 
 @media (max-width: 900px) {
   .container {
     display: flex;
     flex-direction: column;
-    padding: 0 2vw;
-    gap: 2px;
+    gap: 5vh;
   }
   .item {
+    margin: 0 3vw;
     padding: 6vh 1.6vw;
   }
 }

@@ -2,10 +2,8 @@
   color: #fee140;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
-  min-width: 30vw;
-  max-height: 120vh;
+  height: auto;
   border-radius: 20px;
-  padding-bottom: 3vh;
 }
 
 form {
