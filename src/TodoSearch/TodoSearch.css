@@ -32,7 +32,6 @@
 @media (max-width: 900px) {
   .TodoSearch {
     font-size: 15px;
-    width: calc(100% - 130px);
   }
 
 }
