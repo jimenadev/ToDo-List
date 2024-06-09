@@ -1,6 +1,13 @@
 .message {
   padding-top: 3vh;
   color: rgb(153, 84, 158);
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
+}
+
+
+@media (max-width: 900px) {
+  .message{
+    font-size: 15px;
+  }
 }

@@ -16,7 +16,7 @@
 @media (max-width: 900px) {
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 5vh;
   }
   .item {
