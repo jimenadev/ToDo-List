@@ -2,11 +2,10 @@
   font-size: 40px;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding-top: 2vh;
   color: white;
   font-weight: normal;
   display: flex;
-
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -21,18 +20,39 @@
   color: #fa709a;
 }
 
-.wave {
-  min-height: 13vh;
-  height: 13vh;
-  background-color: #7e5446;
-  margin-bottom: 5.5vh;
-}
-
 .todoCounter .todos {
   font-family: "Rubik Doodle Shadow";
   color: white;
 }
 
-.todoCounter .img img {
-  z-index: 100;
+h1.todoCounter div.imgHeader {
+  width:80px;
+  height:80px; 
+}
+
+h1.todoCounter .imgHeader img {
+  width:100%;
+  height:100%; 
+}
+
+@media (max-width: 900px) {
+  .todoCounter {
+    font-size: 20px;
+  }
+  h1.todoCounter div.imgHeader {
+    width:60px;
+    height:60px; 
+  }
+  
+}
+
+@media (max-width: 380px) {
+  .todoCounter {
+    font-size: 12px;
+  }
+  h1.todoCounter div.imgHeader {
+    width:30px;
+    height:30px; 
+  }
+  
 }

@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 3vh 3vw;
+  gap: 20px;
+}
+
+.item {
+  padding: 5vh 2vw;
+  flex: 1 1 calc(50% - 10vw); /* Ajuste para tener espacio entre los elementos */
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5vw;
+  }
+  .item {
+    padding: 6vh 1.6vw;
+    flex: 1 1 80%;
+  }
+}

@@ -1,0 +1,11 @@
+
+.containerList {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 20px;
+}
+  
+.titleTask {
+    color: rgb(153, 84, 158);
+}
+  

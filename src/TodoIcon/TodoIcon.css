@@ -33,3 +33,11 @@
 .Icon-container-delete:hover .Icon-svg {
   fill: red;
 }
+
+@media (max-width: 400px) {
+  .Icon-svg {
+    width: 14px;
+    height: 14px;
+  }
+
+}

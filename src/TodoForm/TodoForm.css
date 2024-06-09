@@ -2,16 +2,15 @@
   color: #fee140;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 20px;
-  min-width: 40vw;
-  max-height: 100vh;
+  min-width: 30vw;
+  max-height: 120vh;
   border-radius: 20px;
+  padding-bottom: 3vh;
 }
 
 form {
   align-items: center;
   justify-content: center;
-  gap: 1vw;
 }
 
 .addItem:disabled,
@@ -23,7 +22,7 @@ form {
   background: #f9fbfc;
   border-radius: 20px;
   border: 2px solid #202329;
-  margin: 0 24px;
+  margin: 20px 24px;
   height: 75px;
   font-size: 24px;
   text-align: center;
@@ -58,16 +57,14 @@ form {
 }
 
 .TodoForm-button {
-  width: max-content;
-  height: 64px;
+  width: 150px;
+  height: 50px;
   background-color: #fee140;
   cursor: pointer;
   display: inline-block;
-  font-size: 25px;
+  font-size: 20px;
   color: #202329;
   font-weight: 400;
-  width: 200px;
-  height: 48px;
   border-radius: 3px;
   border: none;
   font-family: "Raleway", sans-serif;
@@ -83,6 +80,24 @@ form {
   color: #fee140;
 }
 
-.titleCreateTask {
-  padding: 3vh 0;
+
+@media (max-width: 900px) {
+
+  .containerCreate {
+    margin-top: 20vh;
+    max-height: 170vh;
+  }
+  .imgTask {
+    margin: 0 auto;
+  }
+
+  .addItem {
+    font-size: 15px;
+  }
+
+  .TodoForm-button {
+    font-size: 18px;
+  }
+
 }
+

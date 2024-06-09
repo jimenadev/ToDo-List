@@ -40,7 +40,7 @@ function TodoForm({ addTodo, loading }) {
               title="Add new Task"
               className="TodoForm-button"
             >
-              Add Task <MdAddTask className="addTodo" size={30} />
+              Add Task <MdAddTask className="addTodo" size={25} />
             </button>
           </div>
         </form>
