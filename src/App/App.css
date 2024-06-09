@@ -4,3 +4,10 @@
   min-height: 100vh;
   min-width: 90vw;
 }
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .app{
+      background-image:  linear-gradient(180deg, #FA709A 26%, #FEE140 100%);
+  }
+}
