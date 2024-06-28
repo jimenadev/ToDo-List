@@ -20,23 +20,28 @@ import "./App.css";
 import { TodoModal } from "../TodoModal";
 
 function App() {
+  const { states, stateUpdaters } = useTodos();
+
   const {
     loading,
     error,
-    completedTodos,
     totalTodos,
-    searchedTodos,
+    completedTodos,
     searchValue,
+    searchedTodos,
     filterTodos,
+    openModal,
+  } = states;
+
+  const {
     setFilterTodos,
     completeTodo,
     deleteTodo,
     setSearchValue,
     addTodo,
     sincronizeTodos,
-    openModal,
     setOpenModal,
-  } = useTodos();
+  } = stateUpdaters
 
   return (
     <div className="app">
