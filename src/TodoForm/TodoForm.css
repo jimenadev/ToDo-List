@@ -2,8 +2,10 @@
   color: #fee140;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
-  height: auto;
   border-radius: 20px;
+  position: sticky;
+  top: 5px;
+  height: auto;
 }
 
 form {
@@ -84,6 +86,7 @@ form {
   .containerCreate {
     margin-top: 5vh;
     max-height: 170vh;
+    position: static;
   }
   .imgTask {
     margin: 0 auto;
